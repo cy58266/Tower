@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     public List<GameObject> enemys = new List<GameObject>();
     bool isStop = false;//是否停止
     UIManager uiManager;//Ul管理器
+    int flag = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class EnemyManager : MonoBehaviour
             {
                 //更新UI
                 GameData.enemyCount -= 1;
+                flag++;
                 uiManager.UpdateBattleLevelData();
                 //随机创建 UnityEngine.Random.Range(0,10)
                 var index = UnityEngine.Random.Range(0, prefab.Count - 1);
@@ -51,10 +53,10 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemys.Count == 0)
-        {
-            uiManager.ShowGameResult(true);
-        }
+        //if (flag == GameData.killCount && GameData.HP > 0)
+        //{
+        //    uiManager.ShowGameResult(true);
+        //}
     }
     internal void Stop()
     {

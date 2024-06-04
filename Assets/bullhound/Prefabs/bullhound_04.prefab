@@ -1149,7 +1149,7 @@ Transform:
   m_GameObject: {fileID: 7790540183674867224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 33.88, y: 1.39, z: 1.724}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.2527, y: 4.2527, z: 4.2527}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5356091367519597682}
@@ -1159,7 +1159,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3890383505199418246
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1176,8 +1176,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &8128092317679446174
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1220,16 +1219,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25f9e3fd25b678468b784f95c9646f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 3
   enemyName: 
   type: 
   level: 1
-  hp: 100
+  hp: 10000
   attack: 1
   defensive: 10
-  moveSpeed: 5
+  moveSpeed: 10
   gold: 50
   initialMoveSpeed: 0
+  moving: 0
+  nextPoint: {fileID: 0}
+  pointList: []
 --- !u!1 &8039827445754789729
 GameObject:
   m_ObjectHideFlags: 0

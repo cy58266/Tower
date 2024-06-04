@@ -25,6 +25,6 @@ public class GameData
         allEnemyCount = enemyCount;
         killCount = 0;
         time = 0;
-        HP = 100000 * level;
+        HP = 100 * level;
     }
 }

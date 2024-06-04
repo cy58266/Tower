@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     TowerManager towerManager;
     //第一步 先定义
     //主界面
-    Transform mainPage;
+    public Transform mainPage;
     Transform settingPage;
     Button startGameButton;//开始游戏按钮
     Button settingButton;//设置按钮
@@ -162,10 +162,21 @@ public class UIManager : MonoBehaviour
     //返回主菜单
     public void returnStartPage()
     {
-        Debug.Log("asd");
-        //failPage.gameObject.SetActive(false);
-        //mainPage.gameObject.SetActive(true);
-        //SceneManager.LoadScene(0);
+        //Debug.Log("asd");
+        failPage.gameObject.SetActive(false);
+        mainPage.gameObject.SetActive(true);
+        GameData.SetLevelData(1);
+        SceneManager.LoadScene(0);
+
+    }
+
+    public void returnStar()
+    {
+
+        winPage.gameObject.SetActive(false);
+        mainPage.gameObject.SetActive(true);
+        GameData.SetLevelData(1);
+        SceneManager.LoadScene(0);
 
     }
 

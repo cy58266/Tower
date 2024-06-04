@@ -129,8 +129,9 @@ public class Enemy : MonoBehaviour
                 this.GetComponent<Rigidbody>().isKinematic = true;
                 this.transform.GetComponent<Collider>().enabled = false;
 
-                Debug.Log($"...");
+                Debug.Log($"怪物死亡");
                 GameData.killCount += 1;
+                Debug.Log("killCount" + GameData.killCount + "allEnemyCount" + GameData.allEnemyCount);
                 //uiManager.UpdateBattleData();
 
                 //增加金币
